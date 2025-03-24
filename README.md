@@ -14,5 +14,19 @@ It should look like this'
 
 
 A logfile will be written, which will list all steps
-like this    - BLUE:  the exported "Vendor Log INformation"
+like this    - BLUE:  the exported "Vendor Log Information"
 ![image](https://github.com/user-attachments/assets/d471a7b4-6b58-4253-9846-d112a52b3d9a)
+
+
+Process workflow
+
+Step 1   - Start SCE Exe  ( Extract-only ), detect if Payload or Config, Get-CCTK.EXE, Query ABIState and ABIProvState
+Step 1a   - Start SCE Exe  ( Extract-only )
+Step 1b   - query ExtractFolder for ABI_Payload.xml
+Step 1c   - Get file filepath to CCTK.EXE ( part of SCE, available after extract)
+Step 1d   - use CCTK to query current ABIState- and ABIProvState- values
+
+Step 2a   - Start SCE Exe  ( Apply )  
+Step 2b   - verify result
+
+if an error gets detected then the script terminates immedeately
